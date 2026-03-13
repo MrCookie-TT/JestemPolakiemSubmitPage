@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stowarzyszenie | Jestem Polakiem</title>
+    <link rel="icon" type="ico" href="../image/logo_JP3.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5050;
+            --bg: #050505;
+            --text: #ffffff;
+            --nav-height: 80px;
+            --contact-infobg: #dddddd;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            align-items: center;
+        }
+
+        nav {
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+
+        .btn-back{
+            padding: 0.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 0.5rem;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ffffff;
+            color: white;
+            background-color: rgba(206, 0, 0, 0);
+            transition: 0.3s;
+        }
+        
+        .btn-back:hover{
+            color: #000000;
+            background-color: #ffffff;
+             border-color: #000000;
+
+        }
+
+        .logo { 
+            font-size: 1.2rem; 
+            letter-spacing: -1px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+        }
+
+        #main-wrapper.hidden { 
+            display: none;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/bg.png') no-repeat center/cover;
+        }
+
+        h1, h2 { 
+            font-size: clamp(1.1rem, 1vw, 4rem); 
+            text-transform: uppercase; 
+            line-height: 0.85; 
+            justify-content: 0;
+            color: #000000;
+            padding: 1rem;
+        }
+
+        .form {
+            padding: 1rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-contact{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 0.5rem;
+            color: #000000;
+            text-align: center;
+        }
+
+
+        footer{
+            background-color: #000000;
+            padding: 20px 0;
+            color: #404040;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Polonijne media informacyjne w Belgii</div>
+        <img src="../image/logo_JP3.png" style="height: 50px; width: auto;">
+    </nav>
+
+    <div id="main-wrapper">
+        <section class="hero">
+            <div class="contact">
+                <h1>Dziękujemy za wiadomość !</h1>
+                <h2>Wyślemy odpowiedź na email podany w formularzu, tak szybko jak potrafimy.</h2>
+                <a href="pagehome.html"><button class="btn-back"><i class="fa-solid fa-angle-left"></i> Powrót na stronę główną</button></a>
+            </div>
+        </section>
+    </div>
+<footer>
+    <h6>Strona stworzona przez Michała Kęska i należąca do stowarzyszenia Jestem Polakiem 2026. Wszystkie prawa zatrzeżone.</h6>
+</footer>
+</body>
+</html>

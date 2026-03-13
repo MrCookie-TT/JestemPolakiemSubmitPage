@@ -142,7 +142,7 @@
         }
 
         h1 { 
-            font-size: clamp(1.1rem, 1vw, 7rem); 
+            font-size: clamp(1.1rem, 1vw, 4rem); 
             text-transform: uppercase; 
             line-height: 0.85; 
             justify-content: 0;
@@ -220,12 +220,15 @@
                         </div>
                     </div>
                     <form action="https://formsubmit.co/michal.keska2@gmail.com" method="post" class="form">
+                        <input type="text" name="_honey" style="display: none;">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="coonect.success.html">
                         <h1 for="name">Twoje imię i nazwisko</h1>
-                        <input type="text" class="text" id="name" required>
+                        <input type="text" class="text" id="name" name="Imię" required>
                         <h1 for="email">Twój email</h1>
-                        <input type="text" class="text" id="email" required>
+                        <input type="text" class="text" id="email" name="Adres&nbsp;email" required>
                         <h1 for="message">Wiadomość którą dostaniemy</h1>
-                        <textarea name="message" class="message" id="message" required></textarea>
+                        <textarea name="message" class="message" id="message" name="Wiadomość" required></textarea>
                         <button type="submit">Wyślij</button>
                     </form>
                 </div>
