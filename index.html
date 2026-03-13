@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stowarzyszenie | Jestem Polakiem</title>
+    <link rel="icon" type="ico" href="../image/logo_JP3.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff5050;
+            --bg: #050505;
+            --text: #ffffff;
+            --nav-height: 80px;
+            --contact-infobg: #dddddd;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            align-items: center;
+        }
+
+        nav {
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+
+        .btn-back{
+            padding: 0.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 0.5rem;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #ffffff;
+            color: white;
+            background-color: rgba(206, 0, 0, 0);
+            transition: 0.3s;
+        }
+        
+        .btn-back:hover{
+            color: #000000;
+            background-color: #ffffff;
+             border-color: #000000;
+
+        }
+
+        .logo { 
+            font-size: 1.2rem; 
+            letter-spacing: -1px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+        }
+
+        #main-wrapper.hidden { 
+            display: none;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/bg.png') no-repeat center/cover;
+        }
+
+        .form {
+            padding: 1rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-contact{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 0.5rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .form-contact p{
+            padding: 1rem;
+            font-size: xx-large;
+            text-transform: uppercase;
+        }
+
+        .form-contact-lower{
+            display: flex;
+            flex-direction: rox;
+        }
+
+        .contact-info{
+            padding: 1rem;
+            color: #000000;
+            text-align: left;
+        }
+
+        .contact-info label{
+            color: gray;
+        }
+
+        .imgtape{
+            display: flex;
+            justify-content: center;
+            padding: 3rem;
+        }
+
+        .imgtape img{
+            width: 17rem;
+            height: auto;
+        }
+
+        .numer, .mail-info{
+            padding: 1rem;
+            text-decoration: underline;
+            padding-right: 0.4rem;
+        }
+
+        .numer k, .mail-info k{
+            padding-left: 0.4rem;
+        }
+
+        h1 { 
+            font-size: clamp(1.1rem, 1vw, 4rem); 
+            text-transform: uppercase; 
+            line-height: 0.85; 
+            justify-content: 0;
+            color: #000000;
+            padding: 1rem;
+        }
+
+        .text{
+            width: 100%;
+            border-radius: 0.5rem;   
+            background-color: var(--contact-infobg);
+            border-style: none;
+            padding: 0.5rem; 
+        }
+
+        .message{
+            width: 100%;
+            border-radius: 0.5rem;
+            background-color: var(--contact-infobg);
+            border-style: none;
+            height: 8rem;
+            padding: 0.5rem;
+            resize: none;
+        }
+
+        .form button {
+            width: 6rem;
+            margin-top: 1rem;
+            padding: 0.3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 0.5rem;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #000000;
+            color: white;
+            background-color: rgb(206, 0, 0);
+        }
+
+        footer{
+            background-color: #000000;
+            padding: 20px 0;
+            color: #404040;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Polonijne media informacyjne w Belgii</div>
+        <a href="pagehome.html"><button class="btn-back"><i class="fa-solid fa-angle-left"></i> Powrót</button></a>
+        <img src="../image/logo_JP3.png" style="height: 50px; width: auto;">
+    </nav>
+
+    <div id="main-wrapper">
+        <section class="hero">
+            <div class="form-contact">
+                <p>Skontaktuj się z nami</p>
+                <div class="form-contact-lower">
+                    <div class="contact-info">
+                        <div class="numer"><i class="fa-solid fa-phone" class="phone"></i><k>Nasz Belgijski numer telefonu</k></div>
+                        <label>• +32 474 37 07 69</label>
+                        <div class="numer"><i class="fa-solid fa-phone" class="phone"></i><k>Nasz Polski numer telefonu</k></div>
+                        <label>• +48 504 744 622</label>
+                        <div class="mail-info"><i class="fa-solid fa-envelope" class="phone"></i><k>Nasza poczta Email</k></div>
+                        <label>• jestempolakiem.pmib@gmail.com</label>
+                        <div class="imgtape">
+                            <img src="../image/tapepl.png">
+                        </div>
+                    </div>
+                    <form action="https://formsubmit.co/michal.keska2@gmail.com" method="post" class="form">
+                        <input type="text" name="_honey" style="display: none;">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="coonect.success.html">
+                        <h1 for="name">Twoje imię i nazwisko</h1>
+                        <input type="text" class="text" id="name" name="Imię" required>
+                        <h1 for="email">Twój email</h1>
+                        <input type="text" class="text" id="email" name="Adres&nbsp;email" required>
+                        <h1 for="message">Wiadomość którą dostaniemy</h1>
+                        <textarea name="message" class="message" id="message" name="Wiadomość" required></textarea>
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+<footer>
+    <h6>Strona stworzona przez Michała Kęska i należąca do stowarzyszenia Jestem Polakiem 2026. Wszystkie prawa zatrzeżone.</h6>
+</footer>
+</body>
+</html>
